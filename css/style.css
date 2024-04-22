@@ -51,6 +51,7 @@
 
 body {
   font-family: var(--body-font);
+  background-color: var(--bg-color);
 }
 
 .container {
@@ -60,7 +61,7 @@ body {
   margin-right: auto;
   height: auto;
   padding: 0 40px;
-  position: relative;
+  /* position: relative; */
   clear: both;
 }
 
@@ -104,17 +105,16 @@ body {
   border-radius: 5rem;
 }
 
-.nav_link:hover {
-  background-color: transparent;
-  color: var(--red-color);
-  transition: 0.3s;
+.nav_link {
+  padding: 0.7rem;
 }
 
 .active-link {
   background: var(--red-color);
   color: var(--white-color);
-  padding: 0.7rem;
+  transition: all 0.4s ease;
 }
+
 /* ! ------------------ ! */
 /* *       NAVBAR       * */
 /* ? ------------------ ? */
@@ -208,16 +208,12 @@ h6 {
   color: var(--black-color);
 }
 
-.section {
+/* .section {
   width: 100%;
   height: auto;
   clear: both;
   float: left;
-}
-
-.section {
-  background-color: var(--bg-color);
-}
+} */
 
 .about {
   width: 100%;
