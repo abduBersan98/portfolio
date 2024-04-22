@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
         item.classList.remove("active-link");
       });
       this.classList.add("active-link");
-      c;
     });
   });
 
@@ -22,9 +21,9 @@ function onScroll(event) {
     document.body.scrollTop;
 
   var currentSection = null;
-//   console.log("--------------------");
-//   console.log("*******************");
-//   console.log("Scroll Position:", scrollPos);
+  //   console.log("--------------------");
+  //   console.log("*******************");
+  //   console.log("Scroll Position:", scrollPos);
 
   // Détecter la section actuelle
   sections.forEach((section) => {
@@ -45,7 +44,7 @@ function onScroll(event) {
     }
   });
 
-//   console.log("currentSection:", currentSection.getAttribute("id"));
+  //   console.log("currentSection:", currentSection.getAttribute("id"));
 
   // Mise à jour des liens
   document.querySelectorAll(".nav_link").forEach((link) => {
