@@ -64,12 +64,12 @@ function onScroll(event) {
 
 function mouseCursor() {
   options = {
-    outerStyle: "circle",
-    hoverEffect: "circle-move",
+    outerStyle: "circle-basic",
+    hoverEffect: "pointer-blur",
     hoverItemMove: false,
     defaultCursor: false,
-    outerWidth: 30,
-    outerHeight: 30,
+    outerWidth: 41,
+    outerHeight: 41,
   };
   magicMouse(options);
 }

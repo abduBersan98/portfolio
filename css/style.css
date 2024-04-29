@@ -1,3 +1,6 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@500&display=swap");
+
 :root {
   --header-height: 3.5rem;
 
@@ -16,16 +19,17 @@
   --container-color: hsl(var(--second-hue), 30%, 20%); */
 
   --main-color: #537895;
-  --main-color-dark: #09203f;
-  --red-color: #e54b4b;
+  --second-color: #09203f;
+  --red-color: #ff6262;
   --white-color: #fff;
   --bg-color: #eff0f5;
   --black-color: #000;
   --grey-color: #717171;
   --light-grey-color: #ddd;
 
-  --body-font: "mulish";
-  --header-font: "poppins";
+  --custom-font: "Mitr", serif;
+  --main-font: "mulish";
+  --second-font: "poppins";
   --biggest-font-size: 1.75rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -56,13 +60,24 @@ html {
 }
 
 body {
-  font-family: var(--body-font);
-  background-color: var(--bg-color);
+  font-family: var(--custom-font);
+  /* background-color: var(--bg-color);
   background: linear-gradient(
     to top,
-    var(--main-color-dark) 0%,
+    var(--second-color) 0%,
     var(--main-color) 100%
-  );
+  ); */
+  background: var(--main-color); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    var(--second-color),
+    var(--main-color)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    var(--second-color),
+    var(--main-color)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h1,
@@ -73,7 +88,7 @@ h5,
 h6 {
   font-weight: 500;
   line-height: 1.2;
-  font-family: var(--header-font);
+  font-family: var(--custom-font);
   color: var(--black-color);
 }
 
@@ -89,8 +104,8 @@ h6 {
 }
 
 .action_outline_btn {
-  color: var(--main-color-dark);
-  border: 2px solid var(--main-color-dark);
+  color: var(--white-color);
+  border: 1px solid var(--white-color);
   padding: 10px 40px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -102,15 +117,16 @@ h6 {
 }
 
 .action_outline_btn:hover {
-  background-color: var(--main-color-dark);
+  background-color: var(--second-color);
   color: var(--white-color);
   border-radius: 5rem;
+  border: none;
 }
 
 .action_btn {
   color: var(--white-color);
-  background-color: var(--main-color-dark);
-  /* border: 1px solid var(--main-color-dark); */
+  background-color: var(--second-color);
+  /* border: 1px solid var(--second-color); */
   padding: 10px 40px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -246,10 +262,10 @@ h6 {
 }
 
 .home .job {
-  color: var(--main-color-dark);
-  font-family: var(--header-font);
+  color: var(--red-color);
+  font-family: var(--custom-font);
   /* font-size: 17px; */
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 500;
   margin-bottom: 40px;
   max-width: 400px;
@@ -258,7 +274,7 @@ h6 {
 }
 
 .name_section {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 .fn_animation.ready {
@@ -266,20 +282,20 @@ h6 {
 }
 
 .action_section {
-  margin-top: 30px;
+  margin-top: 60px;
   gap: 20px;
 }
 
 .symfony_icon {
   width: 30px;
   height: 30px;
-  fill: var(--main-color-dark);
+  fill: var(--second-color);
 }
 
 .flutter_icon {
   width: 30px;
   height: 30px;
-  fill: var(--main-color-dark);
+  fill: var(--second-color);
 }
 
 .scroll_down {
@@ -341,12 +357,20 @@ h6 {
   border-radius: 10%;
 }
 
+.social_network_item:hover {
+  background-color: var(--second-color);
+}
+
+.social_network_item:hover .social_network_link {
+  color: var(--white-color);
+}
+
 .social_network_link {
   align-items: center;
   justify-content: center;
   gap: 8px;
   text-decoration: none;
-  color: var(--main-color-dark);
+  color: var(--second-color);
   /* color: var(--white-color); */
 }
 
@@ -547,8 +571,8 @@ h6 {
 
 .submit_button {
   color: var(--white-color);
-  background-color: var(--main-color-dark);
-  border: 1px solid var(--main-color-dark);
+  background-color: var(--second-color);
+  border: 1px solid var(--second-color);
   padding: 10px 40px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -557,6 +581,7 @@ h6 {
   transition: all 0.3s ease;
   border-radius: 5rem;
   font-size: 16px;
+  font-family: var(--custom-font);
 }
 
 .submit_button:hover {
@@ -644,7 +669,7 @@ h6 {
 
 .available {
   background-image: url("https://marketifythemes.net/html/grax//img/patterns/inspiration-geometry.png");
-  background-color: var(--main-color-dark);
+  background-color: var(--second-color);
   color: var(--white-color);
   padding: 50px;
 }
@@ -783,7 +808,14 @@ footer h1 {
 }
 
 #magicPointer {
-  background-color: var(--red-color) !important;
+  background: var(--red-color);
+}
+/* #magicPointer.pointer-overlay {
+  background-color: var(--main-color) !important;
+  box-shadow: 0 0 15px 5px var(--main-color) !important;
+} */
+#magicPointer.pointer-blur {
+  border: 1px solid var(--red-color) !important;
 }
 #magicMouseCursor {
   border: 1px solid var(--red-color) !important;
@@ -889,13 +921,13 @@ footer h1 {
 /* ? ------------------ ? */
 
 @media screen and (max-width: 500px) {
-  .home .name {
-    /* font-size: 35px; */
+  /* .home .name {
+    font-size: 35px;
   }
 
   .home .job {
-    /* font-size: 17px; */
-  }
+    font-size: 17px;
+  } */
 
   .contact_form {
     width: 90%;
@@ -907,13 +939,13 @@ footer h1 {
 }
 
 @media screen and (min-width: 500px) {
-  .home .name {
-    /* font-size: 40px; */
+  /* .home .name {
+    font-size: 40px;
   }
 
   .home .job {
-    /* font-size: 17px; */
-  }
+    font-size: 17px;
+  } */
 
   .contact_form {
     width: 60%;
@@ -921,13 +953,13 @@ footer h1 {
 }
 
 @media screen and (min-width: 768px) {
-  .home .name {
-    /* font-size: 45px; */
+  /* .home .name {
+    font-size: 45px;
   }
 
   .home .job {
-    /* font-size: 19px; */
-  }
+    font-size: 19px; 
+  } */
 
   .contact_form {
     width: 45%;
@@ -935,13 +967,13 @@ footer h1 {
 }
 
 @media screen and (min-width: 1040px) {
-  .home .name {
-    /* font-size: 50px; */
+  /* .home .name {
+    font-size: 50px;
   }
 
   .home .job {
-    /* font-size: 22px; */
-  }
+    font-size: 22px;
+  } */
 
   .contact_form {
     width: 35%;
