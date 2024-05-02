@@ -1,6 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap'); */
-@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@500&display=swap");
-
+/* @import url("https://fonts.googleapis.com/css2?family=Mitr:wght@500&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
   --header-height: 3.5rem;
 
@@ -27,9 +27,9 @@
   --grey-color: #717171;
   --light-grey-color: #ddd;
 
-  --custom-font: "Mitr", serif;
-  --main-font: "mulish";
-  --second-font: "poppins";
+  --custom-font: "Poppins", sans-serif;
+  /* --main-font: "mulish";
+  --second-font: "poppins"; */
   --biggest-font-size: 1.75rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -61,6 +61,7 @@ html {
 
 body {
   font-family: var(--custom-font);
+  /* font-weight: 500; */
   /* background-color: var(--bg-color);
   background: linear-gradient(
     to top,
@@ -120,12 +121,13 @@ h6 {
   background-color: var(--second-color);
   color: var(--white-color);
   border-radius: 5rem;
-  border: none;
+  border: 1px solid var(--second-color);
 }
 
 .action_btn {
   color: var(--white-color);
   background-color: var(--second-color);
+  border: 2px solid var(--second-color);
   /* border: 1px solid var(--second-color); */
   padding: 10px 40px;
   -webkit-transition: all 0.3s ease;
@@ -345,16 +347,19 @@ h6 {
   bottom: 50px;
   left: 30px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .social_network_item {
   /* flex-direction: column; */
   /* background-color: hsla(218, 75%, 13%, 0.8); */
   background-color: var(--white-color);
+  border: 1px solid var(--second-color);
   padding: 10px;
   gap: 15px;
   margin-bottom: 5px;
   border-radius: 10%;
+  transition: all 0.3s ease;
 }
 
 .social_network_item:hover {
@@ -453,8 +458,8 @@ h6 {
 }
 
 .about .right .text p {
-  word-spacing: 5px;
-  line-height: 1.5;
+  word-spacing: 0px;
+  line-height: 2;
   color: var(--white-color);
 }
 
@@ -572,7 +577,7 @@ h6 {
 .submit_button {
   color: var(--white-color);
   background-color: var(--second-color);
-  border: 1px solid var(--second-color);
+  border: 2px solid var(--second-color);
   padding: 10px 40px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -1008,5 +1013,9 @@ footer h1 {
 
   .abe_title h3 {
     margin-top: 50px;
+  }
+
+  .about .about_inner .left img {
+    width: auto;
   }
 }
