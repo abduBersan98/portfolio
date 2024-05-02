@@ -63,13 +63,21 @@ function onScroll(event) {
 }
 
 function mouseCursor() {
+  // options = {
+  //   outerStyle: "circle-basic",
+  //   hoverEffect: "pointer-blur",
+  //   hoverItemMove: false,
+  //   defaultCursor: false,
+  //   outerWidth: 41,
+  //   outerHeight: 41,
+  // };
   options = {
-    outerStyle: "circle-basic",
-    hoverEffect: "pointer-blur",
+    outerStyle: "disable",
+    hoverEffect: "pointer-overlay",
     hoverItemMove: false,
     defaultCursor: false,
-    outerWidth: 41,
-    outerHeight: 41,
+    outerWidth: 30,
+    outerHeight: 30,
   };
   magicMouse(options);
 }
