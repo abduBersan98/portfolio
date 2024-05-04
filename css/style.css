@@ -411,7 +411,7 @@ h6 {
 .about {
   width: 100%;
   height: auto;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
   padding-top: 100px;
 }
 
@@ -579,6 +579,7 @@ h6 {
   z-index: 1;
   margin-bottom: 10px;
   font-size: 15px;
+  color: white;
 }
 
 .contact_form_input::placeholder {
@@ -616,72 +617,65 @@ h6 {
 /* ! ------------------ ! */
 
 .skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-  /* background: #f9f9f9; */
-}
-
-.skills_title h3 {
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 5px;
-  font-size: 30px;
-  margin-bottom: 50px;
-}
-
-.skill_card {
-  background: var(--white-color);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
-  width: 280px;
-  transition: transform 0.3s ease-in-out;
-  text-align: center;
-  display: flex; /* Utilisez flexbox */
-  flex-direction: column; /* Les éléments s'empilent verticalement */
-  justify-content: space-between;
-}
-
-.skill_card h3 {
-  margin-top: 15px;
-  color: #333;
-}
-
-.skill_card p {
-  margin-top: 15px;
-  font-size: 0.95em;
-  line-height: 1.6;
-  color: #666;
-}
-
-.skill_card .badge {
-  display: block;
-  margin-top: 10px;
-  background: var(--red-color);
-  color: var(--white-color);
-  padding: 3px 7px;
-  border-radius: 5px;
-  font-size: 0.8em;
-}
-
-.skill_card:hover {
-  transform: translateY(-5px);
-}
-
-.skill_card .badge {
-  width: min-content;
-  padding: 10px;
-  border-radius: 50px;
-  align-content: center;
+  /* padding: 50px; */
+  /* padding: 50px 0 50px 0; */
+  padding-bottom: 100px;
+  padding-top: 100px;
+  max-width: 800px;
   margin: auto;
 }
 
-.skill_card_bottom {
+.skills_inner .abe_title {
+  text-align: center;
+}
+
+.skills_content {
+  padding: 50px 0 50px 0;
+}
+
+.skills_item {
+  padding: 20px 0 20px 0;
+}
+
+.skills_item_title {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--white-color);
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.skills_item_progress_value{
+  font-size: 16px;
+  color: var(--white-color);
+  font-weight: normal;
+}
+
+.skills_item_progress {
+  /* width: 70%; */
+  height: 7px;
+  background-color: var(--white-color);
+  border-radius: 20px;
+}
+
+.skills_item_progress span {
+  display: block;
+  height: 7px;
+  background-color: var(--red-color);
+  border-radius: 20px;
+}
+
+.skills_item_subtitle{
+  font-size: 16px;
+  color: var(--white-color);
   margin-top: 10px;
 }
+
+/* ! ------------------ ! */
+/* *       SKILLS       * */
+/* ? ------------------ ? */
 
 .available {
   background-image: url("https://marketifythemes.net/html/grax//img/patterns/inspiration-geometry.png");

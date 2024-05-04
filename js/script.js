@@ -33,19 +33,32 @@ function onScroll(event) {
     // console.log(
     //   "Section:",
     //   section.id,
-    //   "Start:",
+    //   ", Start:",
     //   section.offsetTop,
-    //   "End:",
+    //   ", End:",
     //   section.offsetTop + section.offsetHeight
     // );
 
+    // si scrollPos est plus proche du haut de la section que de la section suivante
+    // alors on considère que c'est la section actuelle
     if (
-      section.offsetTop <= scrollPos &&
-      section.offsetTop + section.offsetHeight > scrollPos
+      scrollPos >= section.offsetTop - section.offsetHeight / 2 &&
+      scrollPos < section.offsetTop + section.offsetHeight / 2
     ) {
       currentSection = section;
     }
+
+    // if (
+    //   section.offsetTop <= scrollPos &&
+    //   section.offsetTop + section.offsetHeight > scrollPos
+    // ) {
+    //   currentSection = section;
+    // }
+
+
   });
+
+  // console.log("Current Section:", currentSection?.id);
 
   // Mise à jour des liens
   document.querySelectorAll(".nav_link").forEach((link) => {
