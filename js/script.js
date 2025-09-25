@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   mouseCursor();
   backToTopButton();
+
+  setInterval(() => {
+    changeSlide(1);
+  }, 3000);
 });
 
 function onScroll(event) {
@@ -54,8 +58,6 @@ function onScroll(event) {
     // ) {
     //   currentSection = section;
     // }
-
-
   });
 
   // console.log("Current Section:", currentSection?.id);
@@ -135,4 +137,22 @@ function backToTopButton() {
       window.scrollTo({ top: 0, behavior: "smooth" });
       return false;
     });
+}
+
+let currentSlide = 0;
+
+function changeSlide(direction) {
+  const slides = document.querySelector(".slides");
+  const totalSlides = document.querySelectorAll(".slide").length;
+  currentSlide += direction;
+
+  if (currentSlide < 0) {
+    currentSlide = totalSlides - 1;
+  } else if (currentSlide >= totalSlides) {
+    currentSlide = 0;
+  }
+
+  slides.style.transform = `translateX(-${
+    currentSlide * (100 / totalSlides)
+  }%)`;
 }

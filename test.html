@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bon de commande</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .intro {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .order-details {
+            margin: 20px 0;
+        }
+
+        .order-details h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .order-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .order-details table,
+        .order-details th,
+        .order-details td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        .order-details th {
+            background-color: #f2f2f2;
+        }
+
+        .order-summary {
+            margin-top: 20px;
+        }
+
+        .order-summary p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bon de commande</h1>
+        </div>
+        <div class="intro">
+            <p>Merci pour votre commande! Nous sommes ravis de vous compter parmi nos clients. Vous trouverez ci-dessous
+                les détails de votre commande.</p>
+        </div>
+        <div class="order-details">
+            <h2>Commande N°: <%= order.orderNumber %>
+            </h2>
+            <p><strong>Nom:</strong>
+                <%= order.shippingAddress.name %>
+            </p>
+            <p><strong>Adresse:</strong>
+                <%= order.shippingAddress.street %>, <%= order.shippingAddress.postalCode %>
+                        <%= order.shippingAddress.city %>, <%= order.shippingAddress.country %>
+            </p>
+
+            <h2>Détails des articles</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produit</th>
+                        <th>Quantité</th>
+                        <th>Prix Unitaire (€)</th>
+                        <th>Sous-total (€)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% order.items.forEach(item=> { %>
+                        <tr>
+                            <td>
+                                <%= item.title %>
+                            </td>
+                            <td>
+                                <%= item.quantity %>
+                            </td>
+                            <td>
+                                <%= item.price %>
+                            </td>
+                            <td>
+                                <%= item.subTotalPrice %>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+        </div>
+        <div class="order-summary">
+            <p><strong>Total HT:</strong>
+                <%= order.totalPriceHT %> €
+            </p>
+            <p><strong>Total TTC:</strong>
+                <%= order.totalPriceTTC %> €
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
